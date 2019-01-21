@@ -42,10 +42,7 @@
 
     // Register the extension
     ScratchExtensions.register('My first extension', descriptor, ext);
-})({});
-
-(function(ext) {
-    // Cleanup function when the extension is unloaded
+    
     ext._shutdown = function() {};
 
     // Status reporting code
@@ -74,9 +71,7 @@
 
     // Register the extension
     ScratchExtensions.register('Random wait extension', descriptor, ext);
-})({});
-
-(function(ext) {
+    
     // Cleanup function when the extension is unloaded
     ext._shutdown = function() {};
 
