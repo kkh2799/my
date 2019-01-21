@@ -3,7 +3,7 @@
     ext._getStatus = function() {
         return {status: 2, msg: 'Ready'};};
     
-    ext.wait random = function(callback){
+    ext.wait_random = function(callback){
         time = Math.random();
         console.log('Wating for ' + time + ' seconds');
         window.setTimeout(function(){
