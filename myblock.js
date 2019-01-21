@@ -36,7 +36,7 @@
     var descriptor = {
         blocks: [
             // Block type, block name, function name
-            ['w', 'my test block', 'my_test_block'],
+            ['w', 'my test block', 'my_first_block'],
         ]
     };
 
