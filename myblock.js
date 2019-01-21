@@ -6,9 +6,8 @@
     ext.wait_random = function(callback){
         time = Math.random();
         console.log('Wating for ' + time + ' seconds');
-        return time;
         window.setTimeout(function(){
-            callback();}, time*1000);};
+            console.log('Time');}, time*1000);};
         
 
     ext.power = function(base, exponent) {
