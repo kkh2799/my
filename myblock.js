@@ -3,25 +3,23 @@
     ext._getStatus = function() {
         return {status: 2, msg: 'Ready'};};
 
-    ext.my_test1_block = function(callback) {
-    time = Math.random();
-        console.log('Waiting for ' + time + ' seconds');
-        window.setTimeout(function() {
-            callback();
-        }, wait*1000);
-    };
-
     var descriptor = {
-        blocks: [
-            ['w', 'my test block', 'my_test_block'],
-            ['r', 'wait %s seconds', 'my_test1_block'],
-            [' ', 'my test2 block', 'my_test2_block'],
-            ['R', 'my test3 block', 'my_test3_block'],
-            ['h', 'my test4 block', 'my_test4_block'],
-            ['b', 'my test5 block', 'my_test5_block'],
-        ]
-    };
-
-    // Register the extension
-    ScratchExtensions.register('My first extension', descriptor, ext);
-})({});
+    blocks: [
+        ['w', 'turn motor on for %n secs',             'motorOnFor', 1],
+        [' ', 'turn motor on',                         'allMotorsOn'],
+        [' ', 'turn motor off',                        'allMotorsOff'],
+        [' ', 'set motor power %n',                    'startMotorPower', 100],
+        [' ', 'set motor direction %m.motorDirection', 'setMotorDirection', 'this way'],
+        ['h', 'when distance %m.lessMore %n',          'whenDistance', '<', 20],
+        ['h', 'when tilt %m.eNe %n',                   'whenTilt', '=', 1],
+        ['r', 'distance',                              'getDistance'],
+        ['r', 'tilt',                                  'getTilt']
+    ],
+    menus: {
+        motorDirection: ['this way', 'that way', 'reverse'],
+        lessMore: ['<', '>'],
+        eNe: ['=','not =']
+    },
+    url: 'http://info.scratch.mit.edu/WeDo',
+    displayName: 'LEGO WeDo 1.0'
+};
