@@ -9,7 +9,8 @@
     var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1;
-    var day = mm+"month"+(dd-base);
+    var yy = today.getFullYear();
+    var day = yy+"년"+mm+"월"+(dd-base)+"일";
     return day;
    };
 	
