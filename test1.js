@@ -25,7 +25,7 @@
         blocks: [
             ['r', '%n 의 %n 제곱', 'power', 3, 3],
             ['w', 'wait for random time', 'wait_random'],
-            ['w', 'wait for %n seconds', 'wait_time', 1],
+            ['r', 'wait for %n seconds', 'wait_time', 1],
         ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
