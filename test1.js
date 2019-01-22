@@ -7,7 +7,7 @@
         time = Math.random() * 10;
         console.log('Wating for %d seconds', time);
         window.setTimeout(function(){
-            console.log('Time');}, time*1000);};
+            callback();}, time*1000);};
         
 
     ext.power = function(base, exponent) {
@@ -16,7 +16,7 @@
     
     ext.wait_time = function(base, callback){
         window.setTimeout(function(){
-           console.log('in');}, base*1000);};
+           callback();}, base*1000);};
         
 
     var descriptor = {
