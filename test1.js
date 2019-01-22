@@ -8,7 +8,9 @@
    ext.days = function(base){
     var today = new Date();
     var dd = today.getDate();
-    return dd-base;
+    var mm = today.getMonth()+1;
+    var yy = today.getFullYear();
+    return yy+'year'+mm+'month'+dd-base;
    };
 	
    ext.today = function(){
@@ -18,7 +20,7 @@
 
     var descriptor = {
         blocks: [
-	    [' ', '%d days ago', 'days', 0],
+	    ['r', '%d days ago', 'days', 0],
 	    ['r', 'Today', 'today'],
 	    ],};
 
