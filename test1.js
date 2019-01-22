@@ -4,7 +4,7 @@
         return {status: 2, msg: 'Ready'};};
     
 	
-   ext.days = function(base){};
+   ext.days = function(){};
         
 
     var descriptor = {
