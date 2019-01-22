@@ -10,7 +10,8 @@
     var dd = today.getDate();
     var mm = today.getMonth()+1;
     var yy = today.getFullYear();
-    return yy+'year'+mm+'month'+dd-base;
+    var day = yy+'year'+mm+'month'+dd-base;
+    return day;
    };
 	
    ext.today = function(){
