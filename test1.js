@@ -17,7 +17,7 @@
     
     ext.wait_time = function(callback, base){
         window.setTimeout(function(){
-            console.log('Waiting for %n seconds',base);}, base*1000);};
+           return base;}, base*1000);};
         
 
     var descriptor = {
