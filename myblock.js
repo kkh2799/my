@@ -14,11 +14,17 @@
     ext.power = function(base, exponent) {
         return Math.pow(base, exponent);
     };
+    
+    ext.wait_time = function(callback, base){
+        window.setTimeout(function(){
+            return base);}, base*1000);};
+        
 
     var descriptor = {
         blocks: [
             ['r', '%n 의 %n 제곱', 'power', 3, 3],
             ['w', 'wait for random time', 'wait_random'],
+            ['w', 'wait for %n seconds', 'wait_time', 1],
             ['w', 'turn motor on for %n secs',             'motorOnFor', 1],
             [' ', 'turn motor on',                         'allMotorsOn'],
             [' ', 'turn motor off',                        'allMotorsOff'],
