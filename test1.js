@@ -4,14 +4,12 @@
         return {status: 2, msg: 'Ready'};};
     
 	
-   ext.days = function(base){
-	   today = new Date();
-	   return {today.getDate() - base};};
+   ext.days = function(base){};
         
 
     var descriptor = {
         blocks: [
-	    ['r', '%d days ago', 'days', 0],
+	    [' ', 'days ago', 'days'],
         ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
