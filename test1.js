@@ -27,7 +27,7 @@
             ['r', '%n 의 %n 제곱', 'power', 3, 3],
             ['w', 'wait for random time', 'wait_random'],
             ['w', 'wait for %d seconds', 'wait_time', 1],
-	    [" ", "%d days ago", "days", 0],
+	    ["r", "%d days ago", "days", 0],
         ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
