@@ -10,12 +10,17 @@
     var dd = today.getDate();
     return dd-base;
    };
+	
+   ext.today = function(){
+    var today = new Date();
+	   return today;};
         
 
     var descriptor = {
         blocks: [
-	    ['r', '%d days ago', 'days', 0],
-        ],};
+	    [' ', '%d days ago', 'days', 0],
+	    ['r', 'Today', 'today'],
+	    ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
 })({});
