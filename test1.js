@@ -19,7 +19,7 @@
 	
    ext.days = function(base){
 	   today = new Date();
-	   return today.getDate() - base;};
+	   return {today.getDate() - base};};
         
 
     var descriptor = {
