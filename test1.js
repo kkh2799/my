@@ -16,15 +16,16 @@
     };
     
     ext.wait_time = function(callback, base){
+        return base;
         window.setTimeout(function(){
-           return base;}, base*1000);};
+           console.log('in');}, base*1000);};
         
 
     var descriptor = {
         blocks: [
             ['r', '%n 의 %n 제곱', 'power', 3, 3],
             ['w', 'wait for random time', 'wait_random'],
-            ['r', 'wait for %n seconds', 'wait_time', 1],
+            ['w', 'wait for %n seconds', 'wait_time', 1],
         ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
