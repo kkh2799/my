@@ -3,16 +3,19 @@
     ext._getStatus = function() {
         return {status: 2, msg: 'Ready'};};
     
+   var today = new Date();
+   var dd = today.getDate();
+   var mm = today.ddetMonth()+1;
+   var yy = today.getFullYear();
 	
    ext.days = function(){
-   today = new Date();
-	   return today.getDate() - base;
+    return yy+'/'+mm+'/'+dd-base;
    };
         
 
     var descriptor = {
         blocks: [
-	    [' ', '%d days ago', 'days', 0],
+	    ['r', '%d days ago', 'days', 0],
         ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
