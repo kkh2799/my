@@ -4,7 +4,7 @@
         return {status: 2, msg: 'Ready'};};
     
     ext.wait_random = function(callback){
-        time = Math.random();
+        time = Math.random() * 10;
         console.log('Wating for %d seconds', time);
         return time;
         window.setTimeout(function(){
@@ -25,7 +25,7 @@
         blocks: [
             ['r', '%n 의 %n 제곱', 'power', 3, 3],
             ['w', 'wait for random time', 'wait_random'],
-            ['r', 'wait for %n seconds', 'wait_time', 1],
+            ['R', 'wait for %n seconds', 'wait_time', 1],
         ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
