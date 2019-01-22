@@ -8,7 +8,7 @@
    var mm = today.getMonth()+1;
    var yy = today.getFullYear();
 	
-   ext.days = function(){
+   ext.days = function(){+
     return yy+'/'+mm+'/'+dd-base;
    };
         
