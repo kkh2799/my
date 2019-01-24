@@ -17,12 +17,18 @@
    ext.today = function(){
     var today = new Date();
 	   return today;};
+	
+   ext.wait_time = function(base, callback){
+   window.setTimeout(function(){
+	   callback();};, base*1000);
+   };
         
 
     var descriptor = {
         blocks: [
 	    ['r', '%d days ago', 'days', 0],
 	    ['r', 'Today', 'today'],
+	    [' ', '%d 초 기다리기' , 'wait_time', 1],
 	    ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
