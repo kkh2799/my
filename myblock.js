@@ -15,9 +15,8 @@
         return Math.pow(base, exponent);
     };
     
-    ext.wait_time = function(base, callback){
-         ext.wait_time = function(base, callback){
-   window.setTimeout(function(){
+   ext.wait_time = function(base, callback){
+   	window.setTimeout(function(){
 	   callback();};, base*1000);
    };
         
