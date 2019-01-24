@@ -17,8 +17,8 @@
     
    ext.wait_time = function(base, callback){
    	window.setTimeout(function(){
-	   return base;
 	    callback();
+	return base;
 	}, base*1000);
    };
 	
