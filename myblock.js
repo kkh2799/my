@@ -20,18 +20,28 @@
 	   callback();
 	}, base*1000);
    };
+	
+  ext.wait_time2 = function(base, callback){
+   	window.setTimeout(function(){
+	   callback();
+	}, base*1000);
+   };
+	
+  ext.test_boolean = function(){};
         
+  ext.test_hot = function(){};
 
     var descriptor = {
         blocks: [
             ['r', '%n 의 %n 제곱', 'power', 3, 3],
             ['w', 'wait for random time', 'wait_random'],
             ['w', 'wait for %n seconds', 'wait_time', 1],
+	    ['w', '%m.seconds 초 기다리기', 'wait_time2', 1],
+	    ['b', 'test boolean block', 'test_boolean'],
+	    ['h', 'test hot block', 'test_hot'],
         ],
         menus: {
-            motorDirection: ['this way', 'that way', 'reverse'],
-            lessMore: ['<', '>'],
-            eNe: ['=','not =']
+            seconds: ['1','2','3','4','5','6','7','8','9','10'],
         },
         url: 'http://info.scratch.mit.edu/WeDo',
         displayName: 'LEGO WeDo 1.0'
