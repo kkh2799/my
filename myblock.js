@@ -16,8 +16,10 @@
     };
     
     ext.wait_time = function(base, callback){
-        window.setTimeout(function(){
-            console.log('Waiting for %n seconds',base);}, base*1000);};
+         ext.wait_time = function(base, callback){
+   window.setTimeout(function(){
+	   callback();};, base*1000);
+   };
         
 
     var descriptor = {
