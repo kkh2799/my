@@ -15,7 +15,7 @@
         return Math.pow(base, exponent);
     };
     
-    ext.wait_time = function(callback, base){
+    ext.wait_time = function(base, callback){
         window.setTimeout(function(){
             console.log('Waiting for %n seconds',base);}, base*1000);};
         
