@@ -30,6 +30,10 @@
   ext.test_boolean = function(){};
         
   ext.test_hot = function(){};
+	
+  ext.link = function(link){
+	  window.location.assign(link);
+  };
 
     var descriptor = {
         blocks: [
@@ -39,6 +43,7 @@
 	    ['w', '%m.seconds 초 기다리기', 'wait_time2', 1],
 	    ['b', 'test boolean block', 'test_boolean'],
 	    ['h', 'test hot block', 'test_hot'],
+	    [' ', '%s 로 이동', 'link', 'https://www.naver.com'],
         ],
         menus: {
             seconds: ['1','2','3','4','5','6','7','8','9','10'],
