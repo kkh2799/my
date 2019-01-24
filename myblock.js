@@ -17,8 +17,8 @@
     
    ext.wait_time = function(base, callback){
    	window.setTimeout(function(){
-	   callback();
-	  return base;
+	   return base;
+	    callback();
 	}, base*1000);
    };
 	
@@ -36,7 +36,7 @@
         blocks: [
             ['r', '%n 의 %n 제곱', 'power', 3, 3],
             ['w', 'wait for random time', 'wait_random'],
-            ['R', 'wait for %n seconds', 'wait_time', 1],
+            ['w', 'wait for %n seconds', 'wait_time', 1],
 	    ['w', '%m.seconds 초 기다리기', 'wait_time2', 1],
 	    ['b', 'test boolean block', 'test_boolean'],
 	    ['h', 'test hot block', 'test_hot'],
