@@ -28,7 +28,7 @@
         blocks: [
 	    ['r', '%d days ago', 'days', 0],
 	    ['r', 'Today', 'today'],
-	    [' ', '%d 초 기다리기' , 'wait_time', 1],
+	    ['w', '%d 초 기다리기' , 'wait_time', 1],
 	    ],};
 
     ScratchExtensions.register('Sample extension', descriptor, ext);
