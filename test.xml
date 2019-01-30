@@ -72,7 +72,9 @@
               </script>
             </block>
           </script>
-          <script x="11.409395973154375" y="271.744966442953"><block s="receiveGo"></block><block s="doForever">
+          <script x="11.409395973154375" y="271.744966442953">
+            <block s="receiveGo"></block>
+            <block s="doForever">
             <script>
               <block s="doChangeVar"><l>position</l><l>0.1</l></block>
               <block s="servoWrite"><l>3</l><block s="reportSum">
